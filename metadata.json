@@ -1,0 +1,6 @@
+{
+  "name": "Campus Companion",
+  "description": "Smart student utility for EE-VLSI engineering students featuring liquid glass aesthetic, mess timetable, class schedule, tasks manager, and smart reminders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
