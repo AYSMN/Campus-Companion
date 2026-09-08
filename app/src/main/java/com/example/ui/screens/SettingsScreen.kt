@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -58,6 +59,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -619,11 +621,20 @@ fun SettingsBottomSheet(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+                    Image(
+                        painter = painterResource(id = com.example.R.drawable.img_silicon_wafer_logo),
+                        contentDescription = "Campus Companion Logo",
+                        modifier = Modifier
+                            .size(60.dp)
+                            .clip(RoundedCornerShape(18.dp))
+                            .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.25f), RoundedCornerShape(18.dp))
+                    )
+                    Spacer(modifier = Modifier.height(10.dp))
                     Text(
                         text = "Campus Companion v1.0",
-                        style = MaterialTheme.typography.labelMedium,
+                        style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = "Department of Electronics & Communication Engineering (VLSI)",
